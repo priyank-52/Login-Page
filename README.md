@@ -19,13 +19,6 @@ A modern animated Flip Login & Registration Form built using pure HTML, CSS & Ja
 ## 🚀 Live Demo  
 🔗 https://priyank-52.github.io/login page/
 
----
-
-## 📸 Preview  
-
-![Screenshot](screenshot.png)
-
----
 
 ## ✨ Features  
 - Smooth sliding animation  
@@ -36,9 +29,7 @@ A modern animated Flip Login & Registration Form built using pure HTML, CSS & Ja
 
 ---
 
-## 📂 Project Structure  
 
-- Easy to customize
 
 ## 📸 Preview
 
