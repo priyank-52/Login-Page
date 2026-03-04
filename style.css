@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+}
+
+.container {
+    width: 800px;
+    max-width: 95%;
+    height: 500px;
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    padding: 50px;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in { left: 0; z-index: 2; }
+.sign-up { left: 0; opacity: 0; z-index: 1; }
+
+.container.active .sign-in { transform: translateX(100%); }
+.container.active .sign-up { transform: translateX(100%); opacity: 1; z-index: 5; }
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 { margin-bottom: 20px; }
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+button {
+    padding: 12px 40px;
+    border: none;
+    border-radius: 20px;
+    background: #ff416c;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+button:hover { background: #ff4b2b; }
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.container.active .overlay-container { transform: translateX(-100%); }
+
+.overlay {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    height: 100%;
+    width: 200%;
+    position: relative;
+    left: -100%;
+    transition: transform 0.6s ease-in-out;
+    display: flex;
+}
+
+.container.active .overlay { transform: translateX(50%); }
+
+.overlay-panel {
+    width: 50%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    text-align: center;
+}
